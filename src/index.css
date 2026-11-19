@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes ff-float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes ff-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ff-float-1 {
+  animation: ff-float-slow 5.5s ease-in-out infinite;
+}
+
+.ff-float-2 {
+  animation: ff-float-slow 6.2s ease-in-out 0.9s infinite;
+}
+
+.ff-float-3 {
+  animation: ff-float-slow 5.8s ease-in-out 1.6s infinite;
+}
+
+.ff-float-4 {
+  animation: ff-float-slow 6.6s ease-in-out 0.4s infinite;
+}
+
+.ff-card-enter {
+  animation: ff-card-enter 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ff-float-1,
+  .ff-float-2,
+  .ff-float-3,
+  .ff-float-4,
+  .ff-card-enter {
+    animation: none;
+  }
+}

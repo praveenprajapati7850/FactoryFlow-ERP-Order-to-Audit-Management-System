@@ -1,0 +1,8 @@
+{
+  "name": "FactoryFlow ERP — Order-to-Audit Management System",
+  "description": "End-to-end manufacturing ERP covering salesman order entry, GST invoicing, Bill of Materials, production variance, weighted-average costing, inventory ledger, receivables, auditor reports, and immutable audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
